@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Boletos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+    <div class="card">
+
+        <div class="logo-area">
+            <div class="logo-icon">B</div>
+            <div class="logo-texts">
+                <span class="logo-small">Sistema</span>
+                <span class="logo-main">Gerador de Boletos</span>
+            </div>
+        </div>
+
+        <h1>GERADOR DE BOLETOS</h1>
+        <p class="subtitle">Selecione o banco e gere seu boleto de forma simples</p>
+
+        <form id="boletoForm">
+            <div class="field">
+                <label for="banco">Banco</label>
+                <select id="banco" required>
+                    <option value="">Selecione o banco</option>
+                    <option value="bradesco">Bradesco</option>
+                    <option value="itau">Itaú</option>
+                    <option value="nubank">Nubank</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="beneficiario">Beneficiário</label>
+                <input type="text" id="beneficiario" placeholder="Digite o beneficiário" required>
+            </div>
+
+            <div class="field">
+                <label for="pagador">Pagador</label>
+                <input type="text" id="pagador" placeholder="Digite o pagador" required>
+            </div>
+
+            <div class="field">
+                <label for="valor">Valor</label>
+                <input type="number" step="0.01" id="valor" placeholder="0,00" required>
+            </div>
+
+            <div class="hidden-fields">
+                <input type="hidden" id="documentoBeneficiario" value="12345678000199">
+                <input type="hidden" id="agencia" value="1234">
+                <input type="hidden" id="conta" value="1234567">
+                <input type="hidden" id="carteira" value="09">
+                <input type="hidden" id="nossoNumero" value="12345678901">
+                <input type="hidden" id="documentoPagador" value="12345678900">
+                <input type="hidden" id="dataDocumento">
+                <input type="hidden" id="dataVencimento">
+                <input type="hidden" id="numeroDocumento" value="1001">
+                <input type="hidden" id="especieDocumento" value="DM">
+                <input type="hidden" id="instrucoes" value="Não receber após o vencimento.">
+            </div>
+
+            <div class="buttons">
+                <button type="button" class="btn-primary" onclick="baixarPdf()">
+                    GERAR BOLETO
+                </button>
+            </div>
+        </form>
+
+        <div id="resultado" class="resultado"></div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
