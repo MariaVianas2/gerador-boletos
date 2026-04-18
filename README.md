@@ -8,6 +8,14 @@ Este é um sistema para **geração de boletos bancários** em PDF. Ele permite 
 - Personalização do boleto de acordo com as regras de cada banco.
 - Geração automática do código de barras e linha digitável.
 
+## Tecnologias Utilizadas
+
+- Java 17: Usado para escrever o backend da aplicação.
+- Spring Boot: Framework para desenvolvimento rápido de aplicações web.
+- iText: Biblioteca para geração de arquivos PDF, utilizada para criar os boletos bancários.
+- Maven: Ferramenta de automação de build e gerenciamento de dependências.
+- GitHub: Para versionamento do código e controle de alterações.
+
 ## Como Usar
 
 1. Clone o repositório:
@@ -22,3 +30,5 @@ Este é um sistema para **geração de boletos bancários** em PDF. Ele permite 
 
 6. Preencha os dados necessários e selecione o banco desejado para gerar o boleto.
   
+## Vídeo do projeto
+- https://youtu.be/SYGq8ou-2nk?si=9H23woPEZZDCDW8P
